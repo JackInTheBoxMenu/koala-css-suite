@@ -2,7 +2,7 @@
  * @name koala-css-suite
  * @author xerneis
  * @version 0.0.1
- * @description A collection of modular CSS snippets
+ * @description A collection of modular, easy to edit CSS snippets.
  * @source https://github.com/JackInTheBoxMenu/koala-css-themeplugins
  * @website https://www.youtube.com/watch?v=QAd5sXdpiZE
  */
@@ -74,7 +74,9 @@
 /*===============================================================================================*/
 /** MAIN **/
 /* DO NOT COMMENT OUT */
+
 @import url('https://jackintheboxmenu.github.io/koala-css-themeplugins/src/main.css');
+
 /* DO NOT COMMENT OUT */
 /*===============================================================================================*/
 
@@ -84,33 +86,59 @@
 
 
 /** ==Settings== **/
-/* all variables start with "xer" to avoid variable clashing with other themes */
-/* ...i mean, who else has my stupid name? */
+/* Highly recommended to back up the settings below to easily copy-paste them when updating.*/
 :root {
-    /** Chatbar **/
-    --xer-gift: none;
-	--xer-gif: none;
-	--xer-sticker: none;
+    /** Chatbar Buttons **/
+	/* [Default] flex*/
+    --xer-gift: none; /* Gift Button */
+	--xer-gif: none; /* GIFs */
+	--xer-sticker: none; /* Stickers */
+	--xer-emoji: flex; /* Emoji Picker */
+	--xer-activity: none; /* Activities */
+
+
+
+    /** Topbar Buttons **/
+	/* [Default] flex*/
+    --xer-call: none; /* Voice Call */
+	--xer-video: none; /* Video Call */
+	--xer-pin: flex; /* Emoji Picker */
+	--xer-gcmake: none;
+	/*--xer-gc: none;*/
+	--xer-usertop: none;
+	/*--xer-list: none;*/
+
+
 
     /** Channels Sidebar **/
-    --xer-invite: none;
     --xer-guide: none; /* Server Guide */
     --xer-channel: none; /* Channels & Roles */
     --xer-browse: none; /* Browse Channels */
-    --xer-member: none;
+    --xer-member: none; /* Members */
     --xer-servershop: none;
-    --xer-event: none;
-    --xer-boost: none; /* Boost Bar */
+    --xer-event: none; /* Events */
+    --xer-boost: none; /* Boost Goal */
+	--xer-invite: none; /* Invite Buttons*/
 	
-	/**Declutter**/
-	--xer-activity: none; /* Activities */
-	--xer-nitro: none; /* Nitro, Shop */
-	--xer-discovery: none; /* Discovery Button*/
+	
+	
+	/** DMs Sidebar**/
+	--xer-nitro: none; /* Nitro */
+	--xer-shop: none; /* Shop */
+	
+	
+	
+	/** Server List **/
+	--xer-discovery: none; /* Discovery*/
 	--xer-fav: none; /* Favorites Button */
 
-	/**User**/
-	--xer-clan: none; /* Clan Tags */
-	--xer-effect: none; /*Avatar Decorations*/
+
+
+	/** User Decorations **/
+	--xer-clan: none; /* Clan Tags; [Default] inline*/
+	--xer-decoration: none; /*Avatar Decorations*/
+	--xer-effect: none; /* Profile Effects */
+	--xer-nameplate: none; /* Animated Profiles */
 	--xer-status: none; /*Statuses*/
 	--xer-sub: inline; /*Anything that aren't Statuses, but appears where a status would be (currently played games, etc.)*/
 	
@@ -118,9 +146,25 @@
 	
 	/** =Custom= **/
 	/* Spacing between Emoji/GIF/Activity buttons (bodge fix for some custom plugins) */
-	--xer-gap: 2px; /* Default 2px; Discord 8px */
+	--xer-gap: 2px; /* [Default] 2px*/
+	
+	
 	
 	/* VC Spine */
-    --xer-vcspine: 4px; /* Thickness; Default 4px */
-    --xer-vccolor: var(--border-strong) /* Color; Default var(--border-strong) */
+    --xer-vcspine: 4px; /* Thickness; [Default] 4px */
+    --xer-vccolor: var(--border-strong) /* Color; [Default] var(--border-strong) */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* All variables start with "xer" to avoid variable clashing with other themes */
+/* ...I mean, who else has my stupid name? */
