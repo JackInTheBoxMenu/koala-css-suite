@@ -87,6 +87,7 @@
 
 /** ==Settings== **/
 /* Highly recommended to back up the settings below to easily copy-paste them when updating.*/
+/* Change these to none to hide or disable them. */
 :root {
     /** Chatbar Buttons **/
 	/* [Default] flex*/
@@ -118,7 +119,7 @@
     --xer-servershop: block; /* Server Shop */
     --xer-event: block; /* Events */
     --xer-boost: flex; /* Boost Goal */
-	/*--xer-invite: none; /* Invite Buttons*/
+	/*--xer-invite: none; /* Invite Buttons*/ /* This one uses multiple display types, so comment out instead of changing value*/
 	
 	
 	
