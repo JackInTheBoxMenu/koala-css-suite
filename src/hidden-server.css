@@ -1,0 +1,18 @@
+[class^=tree_][data-list-id="guildsnav"], [class^=wrapper_][aria-label="Servers sidebar"] {
+  transition: width 0.3s ease, padding 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
+}
+
+[class^=wrapper_][aria-label="Servers sidebar"]:not(:hover) {
+  padding-left: 5px;
+  width: 0px;
+  opacity: 0;
+}
+[class^=wrapper_][aria-label="Servers sidebar"]:has([class^=tree_][data-list-id="guildsnav"]:not(:hover)) [class^=tree_][data-list-id="guildsnav"]  {
+  margin-left: -70px;
+  width: calc(var(--custom-guild-sidebar-width) + -15px);
+}
+[class^=tree_][data-list-id="guildsnav"]:not(:hover) [class^=wrapper_][aria-label="Servers sidebar"],
+[class^=tree_][data-list-id="guildsnav"]:not(:hover) [class^=tree_][data-list-id="guildsnav"] {
+  opacity: 0;
+  transition-delay: 1.5s;
+}
