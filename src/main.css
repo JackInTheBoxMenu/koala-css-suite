@@ -1,4 +1,5 @@
 /** ==NEED TO REDO== **/
+/** Currently just removes box outright.**/
 /** "You do not have permission to send messages in this channel." made to not look like a normal textbox **/
 .form_z_gUBg:has(.inner_2x8-Qn.innerDisabled_2x8-Qn.inner_2x8-Qn.sansAttachButton_2x8-Qn) {
 .attachButton_7TM4SO {
@@ -14,94 +15,142 @@
 
 /** ==Variables== */
 
-/** Emoji/GIF/Activity buttons **/
-[class*=channelTextArea_] {
-	[class^=buttons_] {
-	gap:var(--xer-gap);
-	}
-}
-
 /**Hide "Active Now" in Friends list "**/
 .nowPlayingColumn_zrUwGA {
     display:none;
 }
 
-/* Call buttons are gone*/
-.toolbar_ybUK7Z > div:nth-child(2), .toolbar_ybUK7Z > div:nth-child(3) {
-    display:none !important;
+
+/** Topbar **/
+/* Voice Call*/
+[class^=iconWrapper_][aria-label="Start Voice Call"] {
+    display:var(--xer-call, flex) !important;	
+}
+/* Video Call*/
+[class^=iconWrapper_][aria-label="Start Video Call"] {
+    display:var(--xer-video, flex) !important;	
+}
+/* Pinned Messages*/
+[class^=iconWrapper_][aria-label="Pinned Messages"] {
+    display:var(--xer-pin, flex) !important;	
+}
+/* Create Group Chat */
+[class^=iconWrapper_][aria-label="Add to DM"] {
+    display:var(--xer-gcmake, flex) !important;	
+}
+/* Invite to Group Chat */
+[class^=iconWrapper_][aria-label="Invite to Group DM"] {
+	display:var(--xer-gc, flex) !important;	
+}
+/* User Profile and Member List*/
+[class^=iconWrapper_][aria-label="Show User Profile (Unavailable)"] {
+  display: var(--xer-usertop, flex);
+}
+[class^=iconWrapper_][aria-label="Show Member List"], [class^=iconWrapper_][aria-label="Hide Member List"] {
+  display: var(--xer-list, flex);
 }
 
-/* Invite */
-#channels [aria-label="Create Invite"] {
-  display: var(--xer-invite);
+
+
+
+/** Server List **/
+/* Discovery */
+ [class*="listItem"]:has([class*="discoveryIcon"]) {
+  display: var(--xer-discovery, flex);
+}
+/* Favorites */
+[class^=listItem]:has([class^=wrapper_][data-list-item-id="guildsnav___favorites"]) {
+  display: var(--xer-fav, flex);
 }
 
-/* Guide */
+
+
+
+/* Invite buttons */
+#channels [aria-label="Invite to Channel"]{
+  display: var(--xer-invite, block);
+}
+[class^=inviteButton][aria-label="Invite to Server"] {
+  display: var(--xer-invite, flex);
+}
+
+
+
+
+/** Channels **/
+/* Server Guide */
 #channels [class*=containerDefault_]:has([aria-label="Server Guide"]) {
-  display: var(--xer-guide);
+  display: var(--xer-guide, block);
 }
-
-/* Guide */
+/* Channels & Roles */
 #channels [class*=containerDefault_]:has([aria-label="Channels & Roles"]) {
-  display: var(--xer-channel);
+  display: var(--xer-channel, block);
 }
-
-/* Browse */
+/* Browse Channels */
 #channels [class*=containerDefault_]:has([aria-label="Browse Channels"]) {
-  display: var(--xer-browse);
+  display: var(--xer-browse, block);
 }
-
 /* Members */
 #channels [class*=containerDefault_]:has([aria-label=Members]) {
-  display: var(--xer-member);
+  display: var(--xer-member, block);
 }
-
 /* Events */
 #channels [class*=containerDefault_]:has([data-list-item-id*=channels___upcoming-events-]) {
-  display: var(--xer-event);
+  display: var(--xer-event, block);
 }
-
 /* Server Shop*/
 #channels [class*=containerDefault_]:has([aria-label="Server Shop"]) {
   display: var(--xer-servershop);
 }
-
 /* Boosts */
-#channels [data-list-item-id*=channels___boosts-] {
-  display: var(--xer-boost);
+#channels [class*=containerWithMargin_] {
+  display: var(--xer-boost, flex);
 }
 
+/** Chat Buttons **/
 /* Gifts */
 [class*=form-] [class*=button_][aria-label="Send a gift"] {
-  display: var(--xer-gift);
+  display: var(--xer-gift, flex);
 }
-
-/* GIF Button */
+/* GIF */
 [class*=form-] [class*=button_][aria-label="Open GIF picker"] {
-  display: var(--xer-gif);
+  display: var(--xer-gif, flex);
 }
-
-/* Sticker Picker */
+/* Stickers */
 [class*=form-] [class*=button_][aria-label="Open sticker picker"] {
-  display: var(--xer-sticker);
+  display: var(--xer-sticker, flex);
 }
-
+/* Emoji */
+[class*=form-] [class*=button_][aria-label="Add Emoji"] {
+  display: var(--xer-emoji, flex);
+}
 /* Apps */
 [class*=form-] [class*=app-launcher] {
-  display: var(--xer-activity);
+  display: var(--xer-activity, flex);
+}
+/* Button Gap */
+[class*=channelTextArea_] {
+	[class^=buttons_] {
+	gap:var(--xer-gap, 8px);
+	}
 }
 
-/* Store */
-[class*=privateChannels_] [href="/store"] {
-  display: var(--store);
+
+
+/** DMs **/
+/* Nitro, Shop */
+[class*="channel_"]:has([class*="interactive_"]) {
+	[data-list-item-id*="nitro"] {
+		display:var(--xer-nitro); 
+		}
+	[data-list-item-id*="shop"] {
+		display:var(--xer-shop); 
+	}
 }
 
-/* Shop */
-[class*=privateChannels_] [href="/shop"] {
-  display: var(--shop);
-}
 
-/* Activities */
+
+/** Activities **/
 [class*=content] {
     [class*="membersGroup"]:has([class^="focusTarget"]), [class*="membersGroup"]:has([class^="headerContainer_"]) {
         display:var(--xer-activity);
@@ -111,43 +160,31 @@
     }
 }
 
-/* Nitro, Shop */
-nav[class*="privateChannels" i] [data-list-item-id*="nitro"], nav[class*="privateChannels" i] [data-list-item-id*="shop"] {
-    display:var(--xer-nitro); 
-}
 
+/** User Decorations **/
 /* Clan Tags */
 [class*="clanTag"] {
   display: var(--xer-clan)!important;
 }
-
-/** Discovery **/
- [class*="listItem"]:has([class*="discoveryIcon"]) {
-  display: var(--xer-discovery);
+/* Avatar Decorations */
+[class^="avatarDecoration"] {
+    display: var(--xer-decoration);
 }
-
-/** Favorites **/
-[class^=listItem]:has([class^=wrapper_][data-list-item-id="guildsnav___favorites"]) {
-  display: var(--xer-fav);
+/* Profile Effects */
+[class^="profileEffects"] {
+	display: var(--xer-effect);
 }
-
-/** Profile Effects, Avatar Decorations **/
-[class^="profileEffects"], [class^="avatarDecoration"] {
-    display: var(--xer-effect);
+/* Nameplates */
+[class*="nameplated_"] {
+	[class*="container_"]:has([class*="videoContainer_"]){
+		display: var(--xer-nameplate)!important;
+		}
 }
-
-/** Profile Backgrounds **/
-/**/
-[class*="container_AFi54G"] {
-    display: none!important;
-}
-
-/** Subtext**/
-/* Statuses*/
+/* Status*/
 [class^="subText_"]:has([class^="customStatusContent_"]) {
-    display:var(--xer-status);
+    display:var(--xer-status, block);
 }
-/* Current Game/In VC/Etc. */
+/* Subtext */
 [class^="subText_"]:not(:has([class^="customStatusContent_"])) {
-    display:var(--xer-sub);
+    display:var(--xer-sub, block);
 }
