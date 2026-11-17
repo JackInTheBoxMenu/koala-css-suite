@@ -3,7 +3,7 @@
  * @author xerneis
  * @version 1.0.0
  * @description A collection of modular, easy to edit CSS snippets.
- * @source https://github.com/JackInTheBoxMenu/koala-css-themeplugins
+ * @source https://github.com/JackInTheBoxMenu/koala-css-suite
  * @website https://www.youtube.com/watch?v=QAd5sXdpiZE
  */
   
@@ -22,7 +22,7 @@
 /* Adds animations to several static UI elements */
 /*===============================================================================================*/
 
-@import url('https://jackintheboxmenu.github.io/koala-css-themeplugins/src/extra/anim.css');
+@import url('https://jackintheboxmenu.github.io/koala-css-suite/src/extra/anim.css');
 
 
 /*===============================================================================================*/
@@ -32,7 +32,7 @@
 /* Edit of @vortex_chaos.'s snippet*/
 /*===============================================================================================*/
 
-@import url('https://jackintheboxmenu.github.io/koala-css-themeplugins/src/extra/thread.css');
+@import url('https://jackintheboxmenu.github.io/koala-css-suite/src/extra/thread.css');
 
 
 /*===============================================================================================*/
@@ -41,7 +41,7 @@
 /* Profile Usernames now have an @ and are italicized */
 /*===============================================================================================*/
 
-@import url('https://jackintheboxmenu.github.io/koala-css-themeplugins/src/extra/user.css');
+@import url('https://jackintheboxmenu.github.io/koala-css-suite/src/extra/user.css');
 
 
 /*===============================================================================================*/
@@ -50,7 +50,7 @@
 /* Edit of GH0STP4WZ's Hover Servers */
 /*===============================================================================================*/
 
-@import url('https://jackintheboxmenu.github.io/koala-css-themeplugins/src/extra/hidden-server.css');
+@import url('https://jackintheboxmenu.github.io/koala-css-suite/src/extra/hidden-server.css');
 
 
 /*===============================================================================================*/
@@ -59,7 +59,7 @@
 /* Edit of GH0STP4WZ's "Make Title Bar Make More Sense" */
 /*===============================================================================================*/
 
-@import url('https://jackintheboxmenu.github.io/koala-css-themeplugins/src/extra/titlebar.css');
+@import url('https://jackintheboxmenu.github.io/koala-css-suite/src/extra/titlebar.css');
 
 
 /*===============================================================================================*/
@@ -68,14 +68,14 @@
 /* Edit of GH0STP4WZ's Voice User Spines */
 /*===============================================================================================*/
 
-@import url('https://jackintheboxmenu.github.io/koala-css-themeplugins/src/extra/vc-spine.css');
+@import url('https://jackintheboxmenu.github.io/koala-css-suite/src/extra/vc-spine.css');
 
 
 /*===============================================================================================*/
 /** MAIN **/
 /* DO NOT COMMENT OUT */
 
-@import url('https://jackintheboxmenu.github.io/koala-css-themeplugins/src/main.css');
+@import url('https://jackintheboxmenu.github.io/koala-css-suite/src/main.css');
 
 /* DO NOT COMMENT OUT */
 /*===============================================================================================*/
