@@ -1,5 +1,5 @@
 # koala-css-themeplugins
-Suite of CSS snippets I've made or edited.
+Suite of Discord CSS snippets I've made or edited.
 ## Installation
 Grab the .css file in Releases, or download `koala-css-suite.theme.css` from Main.
 ### BetterDiscord
@@ -8,7 +8,7 @@ Grab the .css file in Releases, or download `koala-css-suite.theme.css` from Mai
 3. Click on the folder icon, labeled **Open Theme Folder**
 4. Drag and drop the .css file into the file path that opened
 ### Vencord
-*uhhhhhhhh idk i assume it's the same*
+*uhhhhhhhh idk i assume it's about the same*
 
 
 ## Editing Settings
