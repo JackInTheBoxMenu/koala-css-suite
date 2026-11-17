@@ -100,7 +100,7 @@
 }
 /* Server Shop*/
 #channels [class*=containerDefault_]:has([aria-label="Server Shop"]) {
-  display: var(--xer-servershop);
+  display: var(--xer-servershop, block);
 }
 /* Boosts */
 #channels [class*=containerWithMargin_] {
@@ -141,10 +141,10 @@
 /* Nitro, Shop */
 [class*="channel_"]:has([class*="interactive_"]) {
 	[data-list-item-id*="nitro"] {
-		display:var(--xer-nitro); 
+		display:var(--xer-nitro, block); 
 		}
 	[data-list-item-id*="shop"] {
-		display:var(--xer-shop); 
+		display:var(--xer-shop, block); 
 	}
 }
 
@@ -164,20 +164,20 @@
 /** User Decorations **/
 /* Clan Tags */
 [class*="clanTag"] {
-  display: var(--xer-clan)!important;
+  display: var(--xer-clan, inline)!important;
 }
 /* Avatar Decorations */
 [class^="avatarDecoration"] {
-    display: var(--xer-decoration);
+    display: var(--xer-decoration, block);
 }
 /* Profile Effects */
 [class^="profileEffects"] {
-	display: var(--xer-effect);
+	display: var(--xer-effect, block);
 }
 /* Nameplates */
 [class*="nameplated_"] {
 	[class*="container_"]:has([class*="videoContainer_"]){
-		display: var(--xer-nameplate)!important;
+		display: var(--xer-nameplate, block)!important;
 		}
 }
 /* Status*/

@@ -90,55 +90,55 @@
 :root {
     /** Chatbar Buttons **/
 	/* [Default] flex*/
-    --xer-gift: none; /* Gift Button */
-	--xer-gif: none; /* GIFs */
-	--xer-sticker: none; /* Stickers */
+    --xer-gift: flex; /* Gift Button */
+	--xer-gif: flex; /* GIFs */
+	--xer-sticker: flex; /* Stickers */
 	--xer-emoji: flex; /* Emoji Picker */
-	--xer-activity: none; /* Activities */
+	--xer-activity: flex; /* Activities */
 
 
 
     /** Topbar Buttons **/
 	/* [Default] flex*/
-    --xer-call: none; /* Voice Call */
-	--xer-video: none; /* Video Call */
+    --xer-call: flex; /* Voice Call */
+	--xer-video: flex; /* Video Call */
 	--xer-pin: flex; /* Emoji Picker */
-	--xer-gcmake: none;
-	/*--xer-gc: none;*/
-	--xer-usertop: none;
-	/*--xer-list: none;*/
+	--xer-gcmake: flex; /* Invite to DM */
+	--xer-gc: flex; /* Invite to Group Chat*/
+	--xer-usertop: flex; /* User Profile */
+	--xer-list: flex; /*Member List */
 
 
 
     /** Channels Sidebar **/
-    --xer-guide: none; /* Server Guide */
-    --xer-channel: none; /* Channels & Roles */
-    --xer-browse: none; /* Browse Channels */
-    --xer-member: none; /* Members */
-    --xer-servershop: none;
-    --xer-event: none; /* Events */
-    --xer-boost: none; /* Boost Goal */
-	--xer-invite: none; /* Invite Buttons*/
+    --xer-guide: block; /* Server Guide */
+    --xer-channel: block; /* Channels & Roles */
+    --xer-browse: block; /* Browse Channels */
+    --xer-member: block; /* Members */
+    --xer-servershop: block; /* Server Shop */
+    --xer-event: block; /* Events */
+    --xer-boost: flex; /* Boost Goal */
+	/*--xer-invite: none; /* Invite Buttons*/
 	
 	
 	
 	/** DMs Sidebar**/
-	--xer-nitro: none; /* Nitro */
-	--xer-shop: none; /* Shop */
+	--xer-nitro: block; /* Nitro */
+	--xer-shop: block; /* Shop */
 	
 	
 	
 	/** Server List **/
-	--xer-discovery: none; /* Discovery*/
-	--xer-fav: none; /* Favorites Button */
+	--xer-discovery: flex; /* Discovery*/
+	--xer-fav: flex; /* Favorites Button */
 
 
 
 	/** User Decorations **/
-	--xer-clan: none; /* Clan Tags; [Default] inline*/
-	--xer-decoration: none; /*Avatar Decorations*/
-	--xer-effect: none; /* Profile Effects */
-	--xer-nameplate: none; /* Animated Profiles */
+	--xer-clan: inline; /* Clan Tags; [Default] inline*/
+	--xer-decoration: block; /*Avatar Decorations*/
+	--xer-effect: block; /* Profile Effects */
+	--xer-nameplate: block; /* Nameplates */
 	--xer-status: none; /*Statuses*/
 	--xer-sub: inline; /*Anything that aren't Statuses, but appears where a status would be (currently played games, etc.)*/
 	
@@ -146,7 +146,7 @@
 	
 	/** =Custom= **/
 	/* Spacing between Emoji/GIF/Activity buttons (bodge fix for some custom plugins) */
-	--xer-gap: 2px; /* [Default] 2px*/
+	--xer-gap: 8px; /* [Default] 8px*/
 	
 	
 	
