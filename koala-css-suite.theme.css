@@ -1,15 +1,126 @@
 /**
- * @name koalacord
+ * @name koala-css-suite
  * @author xerneis
- * @description AAAAAAAAAAAAAA
  * @version 0.0.1
+ * @description A collection of modular CSS snippets
+ * @source https://github.com/JackInTheBoxMenu/koala-css-themeplugins
  * @website https://www.youtube.com/watch?v=QAd5sXdpiZE
  */
+  
+/** Recommended to use an editor like Notepad++ for easier parsing**/
+/** You can enable/disable features by commenting them out as shown here **/
 
-@import url('https://github.com/JackInTheBoxMenu/koala-css-themeplugins/blob/main/src/hidden-server.css');
+/*
+@import url('example.link.css');
+*/
+
+/** ==Extras== **/
+
+/*===============================================================================================*/
+/** Animations **/
+
+/* Adds animations to several static UI elements */
+/*===============================================================================================*/
+
+@import url('https://jackintheboxmenu.github.io/koala-css-themeplugins/src/extra/anim.css');
+
+
+/*===============================================================================================*/
+/** Hidden threads **/
+
+/* Threads hidden by default, hover or select channel to make them visible */
+/* Edit of @vortex_chaos.'s snippet*/
+/*===============================================================================================*/
+
+@import url('https://jackintheboxmenu.github.io/koala-css-themeplugins/src/extra/thread.css');
+
+
+/*===============================================================================================*/
+/** Username @'s **/
+
+/* Profile Usernames now have an @ and are italicized */
+/*===============================================================================================*/
+
+@import url('https://jackintheboxmenu.github.io/koala-css-themeplugins/src/extra/user.css');
+
+
+/*===============================================================================================*/
+/** Hide Servers list until hovered over **/
+
+/* Edit of GH0STP4WZ's Hover Servers */
+/*===============================================================================================*/
+
+@import url('https://jackintheboxmenu.github.io/koala-css-themeplugins/src/extra/hidden-server.css');
+
+
+/*===============================================================================================*/
+/* Voicechat participants have a line next to them for visual flair */
+
+/* Edit of GH0STP4WZ's "Make Title Bar Make More Sense" */
+/*===============================================================================================*/
+
+@import url('https://jackintheboxmenu.github.io/koala-css-themeplugins/src/extra/titlebar.css');
+
+
+/*===============================================================================================*/
+/** Titlebar edited and positioned to the left **/
+
+/* Edit of GH0STP4WZ's Voice User Spines */
+/*===============================================================================================*/
+
+@import url('https://jackintheboxmenu.github.io/koala-css-themeplugins/src/extra/vc-spine.css');
+
+
+/*===============================================================================================*/
+/** MAIN **/
+/* DO NOT COMMENT OUT */
+@import url('https://jackintheboxmenu.github.io/koala-css-themeplugins/src/main.css');
+/* DO NOT COMMENT OUT */
+/*===============================================================================================*/
+
+
+
+
+
 
 /** ==Settings== **/
-/** Enable/Disable certain features**/
+/* all variables start with "xer" to avoid variable clashing with other themes */
+/* ...i mean, who else has my stupid name? */
 :root {
+    /** Chatbar **/
+    --xer-gift: none;
+	--xer-gif: none;
+	--xer-sticker: none;
 
+    /** Channels Sidebar **/
+    --xer-invite: none;
+    --xer-guide: none; /* Server Guide */
+    --xer-channel: none; /* Channels & Roles */
+    --xer-browse: none; /* Browse Channels */
+    --xer-member: none;
+    --xer-servershop: none;
+    --xer-event: none;
+    --xer-boost: none; /* Boost Bar */
+	
+	/**Declutter**/
+	--xer-activity: none; /* Activities */
+	--xer-nitro: none; /* Nitro, Shop */
+	--xer-discovery: none; /* Discovery Button*/
+	--xer-fav: none; /* Favorites Button */
+
+	/**User**/
+	--xer-clan: none; /* Clan Tags */
+	--xer-effect: none; /*Avatar Decorations*/
+	--xer-status: none; /*Statuses*/
+	--xer-sub: inline; /*Anything that aren't Statuses, but appears where a status would be (currently played games, etc.)*/
+	
+	
+	
+	/** =Custom= **/
+	/* Spacing between Emoji/GIF/Activity buttons (bodge fix for some custom plugins) */
+	--xer-gap: 2px; /* Default 2px; Discord 8px */
+	
+	/* VC Spine */
+    --xer-vcspine: 4px; /* Thickness; Default 4px */
+    --xer-vccolor: var(--border-strong) /* Color; Default var(--border-strong) */
 }

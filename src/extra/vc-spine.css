@@ -1,0 +1,14 @@
+/* Spine */
+
+[class^="list_"]  {
+    [class^="draggable_"] {
+            border-left: var(--xer-vcspine) solid var(--xer-vccolor);
+    }
+}
+
+/* Removes hover background's rounded corners */
+[class^=draggable_]:has([class^=voiceUser]):hover{
+	[class*=content]:hover {
+		border-radius:0px;
+	}
+}

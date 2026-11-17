@@ -1,0 +1,153 @@
+/** ==NEED TO REDO== **/
+/** "You do not have permission to send messages in this channel." made to not look like a normal textbox **/
+.form_z_gUBg:has(.inner_2x8-Qn.innerDisabled_2x8-Qn.inner_2x8-Qn.sansAttachButton_2x8-Qn) {
+.attachButton_7TM4SO {
+	display:none;
+	}
+    .textArea_2x8-Qn {
+    text-align: center;
+	}
+  .channelTextArea_z_gUBg {
+    display:none;
+  }
+}
+
+/** ==Variables== */
+
+/** Emoji/GIF/Activity buttons **/
+[class*=channelTextArea_] {
+	[class^=buttons_] {
+	gap:var(--xer-gap);
+	}
+}
+
+/**Hide "Active Now" in Friends list "**/
+.nowPlayingColumn_zrUwGA {
+    display:none;
+}
+
+/* Call buttons are gone*/
+.toolbar_ybUK7Z > div:nth-child(2), .toolbar_ybUK7Z > div:nth-child(3) {
+    display:none !important;
+}
+
+/* Invite */
+#channels [aria-label="Create Invite"] {
+  display: var(--xer-invite);
+}
+
+/* Guide */
+#channels [class*=containerDefault_]:has([aria-label="Server Guide"]) {
+  display: var(--xer-guide);
+}
+
+/* Guide */
+#channels [class*=containerDefault_]:has([aria-label="Channels & Roles"]) {
+  display: var(--xer-channel);
+}
+
+/* Browse */
+#channels [class*=containerDefault_]:has([aria-label="Browse Channels"]) {
+  display: var(--xer-browse);
+}
+
+/* Members */
+#channels [class*=containerDefault_]:has([aria-label=Members]) {
+  display: var(--xer-member);
+}
+
+/* Events */
+#channels [class*=containerDefault_]:has([data-list-item-id*=channels___upcoming-events-]) {
+  display: var(--xer-event);
+}
+
+/* Server Shop*/
+#channels [class*=containerDefault_]:has([aria-label="Server Shop"]) {
+  display: var(--xer-servershop);
+}
+
+/* Boosts */
+#channels [data-list-item-id*=channels___boosts-] {
+  display: var(--xer-boost);
+}
+
+/* Gifts */
+[class*=form-] [class*=button_][aria-label="Send a gift"] {
+  display: var(--xer-gift);
+}
+
+/* GIF Button */
+[class*=form-] [class*=button_][aria-label="Open GIF picker"] {
+  display: var(--xer-gif);
+}
+
+/* Sticker Picker */
+[class*=form-] [class*=button_][aria-label="Open sticker picker"] {
+  display: var(--xer-sticker);
+}
+
+/* Apps */
+[class*=form-] [class*=app-launcher] {
+  display: var(--xer-activity);
+}
+
+/* Store */
+[class*=privateChannels_] [href="/store"] {
+  display: var(--store);
+}
+
+/* Shop */
+[class*=privateChannels_] [href="/shop"] {
+  display: var(--shop);
+}
+
+/* Activities */
+[class*=content] {
+    [class*="membersGroup"]:has([class^="focusTarget"]), [class*="membersGroup"]:has([class^="headerContainer_"]) {
+        display:var(--xer-activity);
+    }
+    [class*=usesCardRows_] {
+        display:var(--xer-activity);
+    }
+}
+
+/* Nitro, Shop */
+nav[class*="privateChannels" i] [data-list-item-id*="nitro"], nav[class*="privateChannels" i] [data-list-item-id*="shop"] {
+    display:var(--xer-nitro); 
+}
+
+/* Clan Tags */
+[class*="clanTag"] {
+  display: var(--xer-clan)!important;
+}
+
+/** Discovery **/
+ [class*="listItem"]:has([class*="discoveryIcon"]) {
+  display: var(--xer-discovery);
+}
+
+/** Favorites **/
+[class^=listItem]:has([class^=wrapper_][data-list-item-id="guildsnav___favorites"]) {
+  display: var(--xer-fav);
+}
+
+/** Profile Effects, Avatar Decorations **/
+[class^="profileEffects"], [class^="avatarDecoration"] {
+    display: var(--xer-effect);
+}
+
+/** Profile Backgrounds **/
+/**/
+[class*="container_AFi54G"] {
+    display: none!important;
+}
+
+/** Subtext**/
+/* Statuses*/
+[class^="subText_"]:has([class^="customStatusContent_"]) {
+    display:var(--xer-status);
+}
+/* Current Game/In VC/Etc. */
+[class^="subText_"]:not(:has([class^="customStatusContent_"])) {
+    display:var(--xer-sub);
+}

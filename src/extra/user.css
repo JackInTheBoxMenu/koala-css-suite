@@ -1,0 +1,12 @@
+/* Profile */
+[class*="TagUsername"]:before, [class*="TagUsername"], .discriminator_jPuNMC:before {
+    content: "@" !important;
+    font-style: italic;
+	color:var(--text-muted);
+}
+
+/* Friends List */
+.discriminator_jPuNMC {
+	font-style: italic;
+	color:var(--text-muted);
+}

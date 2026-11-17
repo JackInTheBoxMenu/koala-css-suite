@@ -1,0 +1,183 @@
+/*** =HEAVY WIP= ***/
+/** Adds animations to many UI elements**/
+
+/* Server Categories*/
+[class*="mainContent_"]:hover[aria-expanded="false"]  {
+  padding-left:0.75%;
+}
+[class*="mainContent_"][aria-expanded="false"] {
+  transition: padding 0.08s ease;
+}
+[class*="mainContent_"][aria-expanded="true"] {
+  padding-left:0.75%;
+}
+
+/* Server Channels */
+[class*=containerDefault_], [class*=containerDragAfter_], [class*=containerDragBefore_], [class*=containerUserOver_] {
+    a[class^="link_"]:hover:not([class*="modeSelected"]) {
+		 [class*="body-md"] {
+			 scale:1.05;
+			 margin-left:1%;
+			 }
+			 div[class^="iconContainer"] {
+				 scale:1.1;
+				 margin-left:5px;
+			 }
+	 }
+    
+    a[class^="link_"] {
+        div[class^="iconContainer"] {
+            transition: scale 0.13s ease, margin 0.2s ease;
+        }
+		[class*="body-md"] {
+            transition: scale 0.2s ease, margin 0.1s ease-out;
+		}
+    }
+    [class*="modeSelected"] {
+        [class*="body-md"] {
+            scale:1.05;
+            margin-left:1%;
+        }
+        div[class^="iconContainer"]{
+            scale:1.1;
+            margin-left:5px;
+        }
+        .name__2ea32 {
+            margin-left:30px;
+        }
+    }
+}
+
+/* Voice Chat */
+[class^=draggable_]:has([class^=voiceUser]):hover{
+	[class^=userAvatar] {
+		animation:--avhover 0.15s forwards, --vc-avhover 0.15s forwards;
+	}
+	[class^=container_]:has([class^=usernameContainer_]) {
+		animation:--vchover 0.15s forwards;
+		animation-timing-function: ease-out;
+	}
+}
+[class^=draggable_]:has([class^=voiceUser]) {
+	[class^=userAvatar] {
+		animation:--avunhover 0.3s forwards, --vc-av 0.3s forwards;
+	}
+	[class^=container_]:has([class^=usernameContainer_]) {
+		animation:--vc 0.3s forwards;
+	}
+}
+
+/* VC Participants */
+.draggable__55bab:hover  {
+  .avatar__07f91{
+  animation:--ahover 0.3s forwards;
+  }
+  .container__394db {
+    animation:--thover 0.2s forwards;
+  }
+}
+.draggable__55bab  {
+  .avatar__07f91{
+  animation:--aunhover 0.3s forwards;
+  }
+  .container__394db {
+    animation:--tunhover 0.2s forwards;
+  }
+}
+
+
+/* DM Names */
+.interactive__972a0:active, .interactiveSelected__972a0 {
+    .avatar__20a53 {
+    animation:--avhover 0.3s forwards;
+    }
+    .overflowTooltip__972a0 {
+        animation:--athover 0.3s forwards;
+        transition: width 0.5s ease, max-width 0.5s ease;
+        max-width:500px;
+        width: 150px;
+    }
+}
+.interactive__972a0 {
+    .avatar__20a53, .name__20a53 {
+        animation:--avunhover 0.3s forwards;
+        
+    }
+    .overflowTooltip__972a0 {
+        animation:--atunhover 0.3s forwards;
+        transition: width 0.5s ease, max-width 0.5s ease;
+    }
+}
+.interactive__972a0:hover {
+    .avatar__20a53 {animation:--avhover 0.3s forwards;
+    }
+    .overflowTooltip__972a0 {
+        animation:--athover 0.3s forwards;
+        transition: width 0.5s ease, max-width 0.5s ease;
+
+    }
+}
+
+/* Server Icons */
+.wrapper_cc5dd2:hover {
+    animation:--avhover 0.25s forwards;
+}
+.wrapper_cc5dd2 {
+    animation:--avunhover 0.25s forwards;
+
+}
+
+/* Anim_Keyframes */
+@keyframes --ahover{
+		from { transform: none; }
+		to { transform: scale(1.5); }
+}
+@keyframes --aunhover{
+		from { transform: scale(1.5); }
+		to { transform: none; }
+}
+@keyframes --thover{
+		from { transform: none; padding-left:0%; }
+		to { transform: scale(1.2); padding-left:7%; }
+}
+@keyframes --tunhover{
+		from { transform: scale(1.2); padding-left:7%; }
+		to { transform: none; padding-left:0%; }
+}
+/*Avatar Anim*/
+@keyframes --avhover{
+		from { transform: none; }
+		to { transform: scale(1.1); }
+}
+@keyframes --avunhover{
+		from { transform: scale(1.1) }
+		to { transform: none; }
+}
+@keyframes --athover{
+		from { transform: none; padding-left:0%; max-width:350px; width: 150px; }
+		to { transform: scale(1.05); padding-left:3%; max-width:350px; width: 230px; }
+}
+@keyframes --atunhover{
+		from { transform: scale(1.05); padding-left:3%; max-width:400px; width: 230px; }
+		to {  transform: none; padding-left:0%; max-width:350px; width: 150px; }
+}
+
+/*VC Anim*/
+@keyframes --vchover{
+	from { transform: none; padding-left:0%; }
+	to { transform: none; padding-left:3%; }
+}
+@keyframes --vc{
+	from { transform: none; padding-left:3%; }
+	to { transform: none; padding-left:0%; }
+}
+
+@keyframes --vc-av {
+	from { transform: scale(1.15); margin-left:3%; }
+	to { transform: none; margin-left:0%; }
+}
+
+@keyframes --vc-avhover {
+	from { transform: none; margin-left:0%; }
+	to { transform: scale(1.15); margin-left:3%; }
+}

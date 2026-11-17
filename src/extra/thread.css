@@ -1,0 +1,12 @@
+/*REWRITE NEEDED*/
+.containerDefault_Wx6SnQ:hover + .container_reDhww, .container_reDhww:hover, .containerDefault_Wx6SnQ.selected_Wx6SnQ + .container_reDhww {
+    max-height: 1000px; 
+    opacity:1;
+    transition: max-height 1s ease, opacity 0.25s ease; }
+
+.container_reDhww {
+    max-height: 0; 
+    opacity:0;
+    overflow: hidden; 
+    transition: max-height 0.25s ease, opacity 0.25s ease;
+}
