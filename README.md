@@ -1,4 +1,4 @@
-# koala-css-themeplugins
+# koala-css-suite
 Suite of Discord CSS snippets I've made or edited.
 ## Installation
 Grab the .css file in Releases, or download `koala-css-suite.theme.css` from Main.
