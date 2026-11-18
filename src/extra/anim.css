@@ -87,34 +87,35 @@
 
 
 /* DM Names */
-.interactive__972a0:active, .interactiveSelected__972a0 {
-    .avatar__20a53 {
-    animation:--avhover 0.3s forwards;
+[class*="interactive_"]:active, [class*="interactiveSelected_"] {
+    [class*=wrapper_] {
+		scale:1.1;
+		padding-left:10%;
+	
     }
-    .overflowTooltip__972a0 {
-        animation:--athover 0.3s forwards;
-        transition: width 0.5s ease, max-width 0.5s ease;
-        max-width:500px;
-        width: 150px;
+    [class*="nameAndDecorators"] {
+		padding-left:3%;
     }
 }
-.interactive__972a0 {
-    .avatar__20a53, .name__20a53 {
-        animation:--avunhover 0.3s forwards;
+[class*=interactive]:hover {
+    [class*="wrapper_"] {
+		scale:1.1;
+		padding-left:10%;
+    }
+    [class*="nameAndDecorators"] {
+		padding-left:3%;
+
+    }
+}
+
+[class*="interactive"] {
+    [class*="wrapper_"] {
+        transition: scale 0.25s ease-out, padding 0.25s ease;
         
     }
-    .overflowTooltip__972a0 {
-        animation:--atunhover 0.3s forwards;
-        transition: width 0.5s ease, max-width 0.5s ease;
-    }
-}
-.interactive__972a0:hover {
-    .avatar__20a53 {animation:--avhover 0.3s forwards;
-    }
-    .overflowTooltip__972a0 {
-        animation:--athover 0.3s forwards;
-        transition: width 0.5s ease, max-width 0.5s ease;
-
+    [class*="nameAndDecorators"] {
+		padding-left:0%;
+        transition: padding 0.25s ease-out;
     }
 }
 
@@ -147,10 +148,10 @@
 /*Avatar Anim*/
 @keyframes --avhover{
 		from { transform: none; }
-		to { transform: scale(1.1); }
+		to { transform: scale(1.05); }
 }
 @keyframes --avunhover{
-		from { transform: scale(1.1) }
+		from { transform: scale(1.05) }
 		to { transform: none; }
 }
 @keyframes --athover{
