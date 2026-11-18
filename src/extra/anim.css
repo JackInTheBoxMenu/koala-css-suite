@@ -93,8 +93,8 @@
 		padding-left:10%;
 	
     }
-    [class*="nameAndDecorators"] {
-		padding-left:3%;
+    [class*="content_"] {
+		transform:translate(4%, 0px);
     }
 }
 [class*=interactive]:hover {
@@ -102,9 +102,8 @@
 		scale:1.1;
 		padding-left:10%;
     }
-    [class*="nameAndDecorators"] {
-		padding-left:3%;
-
+    [class*="content_"] {
+		transform:translate(4%, 0px);
     }
 }
 
@@ -113,9 +112,9 @@
         transition: scale 0.25s ease-out, padding 0.25s ease;
         
     }
-    [class*="nameAndDecorators"] {
-		padding-left:0%;
-        transition: padding 0.25s ease-out;
+    [class*="content_"] {
+		transform:translate(0px, 0px);
+        transition: transform 0.25s ease-out;
     }
 }
 
